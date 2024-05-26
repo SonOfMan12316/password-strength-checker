@@ -57,7 +57,7 @@ export default class Operation {
         Cpu: 2,
         Unit: 2 * 10 ** 6,
         Para: 2,
-        TimeOptimyze: this.GetDate(this.OperationOptim, 2, 2),
+        OptimizeTime: this.GetDate(this.OperationOptim, 2, 2),
         Time: this.GetDate(this.Operation, 2, 2),
       },
       {
@@ -66,7 +66,7 @@ export default class Operation {
         Cpu: 4,
         Unit: 4 * 10 ** 6,
         Para: 4,
-        TimeOptimyze: this.GetDate(this.OperationOptim, 4, 4),
+        OptimizeTime: this.GetDate(this.OperationOptim, 4, 4),
         Time: this.GetDate(this.Operation, 4, 4),
       },
       {
@@ -75,7 +75,7 @@ export default class Operation {
         Cpu: 4.5,
         Unit: 4.5 * 10 ** 6,
         Para: 8,
-        TimeOptimyze: this.GetDate(this.OperationOptim, 4.5, 8),
+        OptimizeTime: this.GetDate(this.OperationOptim, 4.5, 8),
         Time: this.GetDate(this.Operation, 4.5, 8),
       },
       {
@@ -84,7 +84,7 @@ export default class Operation {
         Cpu: 2.4,
         Unit: 2.4 * 10 ** 6,
         Para: 8,
-        TimeOptimyze: this.GetDate(this.OperationOptim, 2.4, 8),
+        OptimizeTime: this.GetDate(this.OperationOptim, 2.4, 8),
         Time: this.GetDate(this.Operation, 2.4, 8),
       },
       {
@@ -93,7 +93,7 @@ export default class Operation {
         Cpu: 3.5,
         Unit: 3.5 * 10 ** 6,
         Para: 8,
-        TimeOptimyze: this.GetDate(this.OperationOptim, 3.5, 8),
+        OptimizeTime: this.GetDate(this.OperationOptim, 3.5, 8),
         Time: this.GetDate(this.Operation, 3.5, 8),
       },
       {
@@ -102,7 +102,7 @@ export default class Operation {
         Cpu: '2.4 * 3',
         Unit: 2.4 * 3 * 10 ** 6,
         Para: 8,
-        TimeOptimyze: this.GetDate(this.OperationOptim, 2.4 * 3, 8),
+        OptimizeTime: this.GetDate(this.OperationOptim, 2.4 * 3, 8),
         Time: this.GetDate(this.Operation, 2.4 * 3, 8),
       },
       {

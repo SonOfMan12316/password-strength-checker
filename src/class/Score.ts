@@ -24,7 +24,7 @@ export default class Score {
       ScoreMax += result.ScoreMax;
     });
 
-    return new ScoreResume(Score, ScoreMax, Math.floor((Score * 100) / ScoreMax));
+    return new ScoreResume(Math.floor(Score), ScoreMax, Math.floor((Score * 100) / ScoreMax));
   }
 
   Characters(): ScoreElement {

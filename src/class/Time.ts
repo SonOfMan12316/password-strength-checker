@@ -51,7 +51,7 @@ export default class Time {
           Math.floor(24 * (seconds / 3600)) +
           'Mo avec un modem 56K',
         en:
-          'This is the seconds to download a ' +
+          'This is the second taken to download a ' +
           Math.floor(24 * (seconds / 3600)) +
           'MB file with a 56K modem',
       };
