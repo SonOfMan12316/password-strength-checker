@@ -12,7 +12,6 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   type?: string;
   variant?: 'primary' | 'naked' | 'feint' | 'grey' | 'black';
   onChange?: (...args: any[]) => any;
-  tooltipInfo?: string | ReactNode;
   required?: boolean;
 }
 
@@ -26,7 +25,6 @@ const Input: React.FC<InputProps> = forwardRef((props, ref) => {
     onChange,
     type,
     variant = 'primary',
-    tooltipInfo,
     required,
     ...rest
   } = props;
@@ -101,7 +99,6 @@ Input.propTypes = {
   type: PropTypes.string,
   variant: PropTypes.oneOf(['primary', 'naked', 'feint', 'grey']),
   onChange: PropTypes.func,
-  tooltipInfo: PropTypes.string,
   required: PropTypes.bool,
 };
 

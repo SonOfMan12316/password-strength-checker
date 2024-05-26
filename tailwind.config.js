@@ -12,7 +12,7 @@ module.exports = {
         'ch-border-grey': '#999999',
         'ch-trans-secondary': '#202124',
         'ch-footer': '#333333',
-        'ch-footer-paragraph': '#FFFFE6',
+        'ch-footer-paragraph': '#f4f4f4',
       },
     },
     fontFamily: {
