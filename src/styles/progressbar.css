@@ -1,0 +1,113 @@
+.progress {
+  background-color: #d8d8d8;
+  border-radius: 20px;
+  position: relative;
+  margin: 15px 0;
+  height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.progress-done {
+  background: linear-gradient(to left, #195196, #72f3ff);
+  box-shadow: 0 3px 3px -5px #195196, 0 2px 5px #72f3ff;
+  border-radius: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 0;
+  opacity: 0;
+  transition: 1s ease 0.3s;
+}
+
+.percentage {
+  position: absolute;
+  left: 30%;
+}
+
+@media screen and (min-width: 350px) {
+  .percentage {
+    left: 35%;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .percentage {
+    left: 40%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .percentage {
+    left: 42.5%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .percentage {
+    left: 45%;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .calendar {
+    position: absolute;
+    right: 10rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .calendar {
+    position: absolute;
+    right: 10.5rem;
+    bottom: -2.5rem;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .calendar {
+    position: absolute;
+    bottom: -2.5rem;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .calendar {
+    position: absolute;
+    right: 11.6rem;
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .calendar {
+    position: absolute;
+    right: 12.25rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .calendar {
+    position: absolute;
+    right: 12.7rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .calendar {
+    position: absolute;
+    right: 13.2rem;
+    bottom: -2.2rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .calendar {
+    position: absolute;
+    right: 13.9rem;
+    bottom: -2rem;
+  }
+}
