@@ -1,5 +1,7 @@
 import { create } from 'zustand';
-import { Stats, Score, Operation } from '../class';
+import { Stats, Score, Operation, Time } from '../class';
+import moment from 'moment';
+import i18n from '../i18n';
 
 interface State {
   local: string;
@@ -7,43 +9,62 @@ interface State {
   stats: Stats;
   score: Score;
   operation: Operation;
+  time: Time;
 }
 
-const defaultLocal = 'en';
-const defaultPassword: string = '';
-const defaultStats = new Stats(defaultPassword);
-const defaultScore = new Score(defaultStats);
-const defaultOperation = new Operation(defaultStats);
+const local = 'en';
+const defaultPassword = '';
 
-const initialState = {
-  local: defaultLocal,
-  password: defaultPassword,
-  stats: defaultStats,
-  score: defaultScore,
-  operation: defaultOperation,
+const createInitialState = (password = defaultPassword) => {
+  const stats = new Stats(password);
+  return {
+    local,
+    password,
+    stats,
+    score: new Score(stats),
+    operation: new Operation(stats),
+    time: new Time(),
+  };
 };
 
 interface Actions {
   editLocal: (local: string) => void;
   editPassword: (password: string) => void;
+  getResume: () => { Score: number; ScoreMax: number; Percent: number };
+  optimizeTime: () => number;
 }
 
-const useStore = create<State & Actions>((set) => ({
-  ...initialState,
+const useStore = create<State & Actions>((set, get) => ({
+  ...createInitialState(),
 
-  editLocal: (local: string) =>
-    set((state) => ({
-      ...state,
-      local: local,
-    })),
+  editLocal: (local: string) => {
+    if (!['en', 'fr'].includes(local)) {
+      local = 'en';
+    }
+    i18n.changeLanguage(local);
+    moment.locale(local);
+    set({ local });
+  },
+
   editPassword: (password: string) =>
-    set((state) => ({
-      ...state,
-      password: password,
-      stats: new Stats(password),
-      score: new Score(state.stats),
-      operation: new Operation(state.stats),
-    })),
+    set(() => {
+      const stats = new Stats(password);
+      return {
+        password,
+        stats,
+        score: new Score(stats),
+        operation: new Operation(stats),
+      };
+    }),
+
+  getResume: () => {
+    const score = get().score;
+    return score.Resume();
+  },
+  optimizeTime: () => {
+    const comparator = get().operation.Comparator();
+    return Math.floor(comparator[comparator.length - 1].Time);
+  },
 }));
 
-export default useStore;
+export { useStore };

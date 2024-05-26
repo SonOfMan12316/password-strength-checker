@@ -1,7 +1,6 @@
 import React from 'react';
-import LanguageButton from './components/LanguageButton';
+import { LanguageButton, PasswordCard, ScoreBar, TimeCard } from './components';
 import './styles/index.css';
-import PasswordCard from './components/PasswordCard';
 
 const App: React.FC = () => {
   return (
@@ -9,6 +8,8 @@ const App: React.FC = () => {
       <header className='App-header'>
         <LanguageButton />
         <PasswordCard />
+        <ScoreBar />
+        <TimeCard />
       </header>
     </div>
   );
