@@ -1,5 +1,5 @@
 import React from 'react';
-import { LanguageButton, PasswordCard, ScoreBar, TimeCard } from './components';
+import { LanguageButton, PasswordCard, ScoreBar, TimeCard, StatsTable } from './components';
 import './styles/index.css';
 
 const App: React.FC = () => {
@@ -10,6 +10,7 @@ const App: React.FC = () => {
         <PasswordCard />
         <ScoreBar />
         <TimeCard />
+        <StatsTable />
       </header>
     </div>
   );
