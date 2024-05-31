@@ -17,8 +17,12 @@ const PasswordCard = () => {
   };
 
   return (
-    <div className='px-6 my-4 lg:mt-8 mb-4 flex justify-center'>
-      <div style={style} className='p-4 rounded w-10/12'>
+    <div className='px-6 lg:px-8 my-4 lg:mt-8 mb-4 flex justify-center'>
+      <form
+        onSubmit={(event) => event.preventDefault()}
+        style={style}
+        className='p-4 rounded w-full lg:w-10/12'
+      >
         <Input
           type={passwordType}
           onChange={(event) => updatePassword(event?.target?.value)}
@@ -44,7 +48,7 @@ const PasswordCard = () => {
             )
           }
         />
-      </div>
+      </form>
     </div>
   );
 };

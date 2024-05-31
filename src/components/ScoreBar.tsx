@@ -15,7 +15,7 @@ const ScoreBar = () => {
   }, [Percent]);
 
   return (
-    <div className='px-6 flex flex-col justify-center w-10/12 mx-auto'>
+    <div className='px-6 lg:px-8 flex flex-col justify-center w-10/12 lg:w-9/12 mx-auto'>
       <div className='progress w-full mx-6'>
         <div className='progress-done' style={style}>
           <div

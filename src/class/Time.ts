@@ -3,8 +3,8 @@ export default class Time {
     if (seconds <= 60) {
       // 1minute
       return {
-        fr: 'Votre mot de passe pourrait être craqué avant même que vous n\'ayez le temps de dire "oups"',
-        en: 'Your password could be cracked before you even have seconds to say "mancyDev"',
+        fr: "Votre mot de passe pourrait être craqué avant même que vous n'ayez le temps de dire 'mancyDev'",
+        en: "Your password could be cracked before you even have seconds to say 'mancyDev'",
       };
     } else if (seconds <= 600) {
       // 10minute

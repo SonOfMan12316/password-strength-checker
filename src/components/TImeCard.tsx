@@ -22,14 +22,33 @@ const TimeCard: React.FC = () => {
 
   const optimizedTime = TimeOptimyze();
 
+  const boldenText = (value: string | number): JSX.Element => {
+    if (typeof value === 'string') {
+      const parts = value.split('mancyDev');
+      return (
+        <>
+          {parts.map((part, index) => (
+            <React.Fragment key={index}>
+              {part}
+              {index < parts.length - 1 && <strong>mancyDev</strong>}
+            </React.Fragment>
+          ))}
+        </>
+      );
+    }
+    return <>{value}</>;
+  };
+
   return (
-    <div>
+    <div className='px-6 lg:px-8 py-3 lg:py-6'>
       <div className='text-center'>
-        <p>
+        <p className='text-xs md:text-sm'>
           {`${t('timeto.time')} `}
           {moment(new Date().getTime() + optimizedTime).fromNow()}
         </p>
-        <p>{TimeTo.Seconds(optimizedTime / 3600)[Local]}</p>
+        <p className='text-xs md:text-sm'>
+          {boldenText(TimeTo.Seconds(optimizedTime / 3600)[Local])}
+        </p>
       </div>
     </div>
   );
