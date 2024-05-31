@@ -11,7 +11,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   placement?: 'start' | 'end';
   type?: string;
   variant?: 'primary' | 'naked' | 'feint' | 'grey' | 'black';
-  onChange?: (...args: any[]) => any;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   required?: boolean;
 }
 

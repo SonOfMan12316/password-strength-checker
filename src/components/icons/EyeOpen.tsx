@@ -1,13 +1,13 @@
-const EyeOpen = ({ ...props }) => {
+import React from 'react';
+
+interface IconProp {
+  className: string;
+  onClick: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+const EyeOpen: React.FC<IconProp> = () => {
   return (
-    <svg
-      width='24'
-      height='24'
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
-      {...props}
-    >
+    <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
       <path
         d='M21.257 10.962C21.731 11.582 21.731 12.419 21.257 13.038C19.764 14.987 16.182 19 12 19C7.81801 19 4.23601 14.987 2.74301 13.038C2.51239 12.7411 2.38721 12.3759 2.38721 12C2.38721 11.6241 2.51239 11.2589 2.74301 10.962C4.23601 9.013 7.81801 5 12 5C16.182 5 19.764 9.013 21.257 10.962Z'
         stroke='black'

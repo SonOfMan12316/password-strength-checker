@@ -1,13 +1,11 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { useStore } from '../store';
-import { TableData, TableColumn } from '../compositions';
+import { TableData } from '../compositions';
 import { ColorGenerator } from '../class';
 import { Checkmark, Triangle } from './icons';
 
 const Stats: React.FC = () => {
   const { t } = useTranslation();
-  const column = TableColumn();
   const table = TableData();
 
   const Color = new ColorGenerator();
@@ -28,7 +26,7 @@ const Stats: React.FC = () => {
               }}
             >
               <strong className='flex items-center justify-center text-xs md:text-sm'>
-                {tableData.check ? <Checkmark className='mr-2' /> : <Triangle className='mr-2' />}
+                {tableData.check ? <Checkmark /> : <Triangle />}
                 {tableData.title}
               </strong>
             </div>

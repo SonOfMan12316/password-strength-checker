@@ -1,4 +1,6 @@
-const Triangle = ({ ...props }) => {
+import React from 'react';
+
+const Triangle: React.FC = ({ ...props }) => {
   return (
     <svg
       width='21'

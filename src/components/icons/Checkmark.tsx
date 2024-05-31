@@ -1,4 +1,6 @@
-const Checkmark = ({ ...props }) => {
+import React from 'react';
+
+const Checkmark: React.FC = ({ ...props }) => {
   return (
     <svg
       width='21'

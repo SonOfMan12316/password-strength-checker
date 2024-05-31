@@ -1,7 +1,8 @@
+import React from 'react';
 import { USFlag, FranceFlag } from '../components/icons';
 import { useStore } from '../store';
 
-const LanguageButton = () => {
+const LanguageButton: React.FC = () => {
   const style = {
     marginRight: '5px',
   };
