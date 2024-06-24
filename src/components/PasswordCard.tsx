@@ -12,17 +12,18 @@ const PasswordCard = () => {
     setPassword(newPassword);
     editPassword(newPassword);
   };
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+  };
+
   const style = {
     border: '1px solid rgba(0, 0, 0, .12)',
   };
 
   return (
     <div className='px-6 lg:px-8 my-4 lg:mt-8 mb-4 flex justify-center'>
-      <form
-        onSubmit={(event) => event.preventDefault()}
-        style={style}
-        className='p-4 rounded w-full lg:w-10/12'
-      >
+      <form onSubmit={handleSubmit} style={style} className='p-4 rounded w-full lg:w-10/12'>
         <Input
           type={passwordType}
           onChange={(event) => updatePassword(event?.target?.value)}
